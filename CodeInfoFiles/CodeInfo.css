@@ -1,0 +1,223 @@
+@charset "utf-8";
+/* CSS Document */
+
+#code-basic-info
+{
+	margin:0 10px 5px 15px;
+	padding:0 10px 10px 10px;
+	border:#CCC 1px solid;
+	float:left;
+	clear:both;
+	width:800px;	
+}
+#code-img
+{
+	width:120px;
+	height:130px;
+	float:left;
+	clear:left;
+	margin-left:25px;
+}
+#code-header
+{
+	width:650px;
+	float:left;
+	clear:right;
+	margin-top:15px;
+	padding:0;
+}
+
+#code-header p
+{
+	font-size:22px;
+	font-weight:600;
+	letter-spacing:5px;
+	margin:5px 5px 5px 15px;
+	display:block;
+	float:left;
+	width:100%;
+}
+#code-grade,#code-commenttimes
+{
+	color:#ff9900;
+}
+#code-commenttimes
+{
+	text-decoration:underline;
+}
+#code-commenttimes:hover
+{
+	color:#33CCFF;	
+}
+#download-btn
+{
+	display:block;
+	float:left;
+	width:150px;
+	height:30px;
+	margin-left:15px;
+	margin-top:5px;
+	font-size:20px;
+	font-weight:600;
+	letter-spacing:5px;
+}
+#code-basic-info ul
+{
+	list-style:none;
+	float:left;
+	display:block;
+	width:100%;
+}
+
+#code-basic-info ul li
+{
+	margin:10px  22px 2px 20px;
+	float:left;		
+}
+#code-basic-info ul li span
+{
+	margin:10px;	
+}
+.code-tagcontent a
+{
+	width:90px;
+	color:#10418b;
+}
+
+/*====tabs标题样式设置====*/
+.tabs {
+	margin: 0;
+	margin-left:15px;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 32px;/*设置tabs的高度*/ /*根据上图所示，设置列表ul的左边框和右边框*/
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	width: 821px;
+}
+.tabs li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 31px;/*=列表项高度设置为比ul高度少1px，=*/
+	line-height: 31px;/*=设置相同的line-height让元素居中=*/ /*=根据上图显示，设置li的边框，并且左边框不设置=*/
+	border: 1px solid #ccc;
+	border-left: none;
+	margin-bottom: -1px;/*=将列表项下拉1px=*/
+	overflow: hidden;
+	position: relative;
+	background: #8db6cd;
+}
+.tabs a {
+	text-decoration: none;
+	color: #000;
+	display: block;
+	font-size: 1.2em;
+	padding: 0 10px;
+	border: 1px solid #fff;
+	outline: none;
+}
+.tabs a:hover {
+	background: #87CEFA;
+	color:#000;
+}
+.tabs li.active, .tabs li.active a:hover {
+	background: #fff; /*=设置当前tabs项的底部边框，颜色对面和主内容背景色一致=*/
+	border-bottom: 1px solid #fff;
+}/*==tabs主内容样式设置==*/
+.tabContent {
+	border: 1px solid #ccc;
+	border-top: none;	
+	clear: both;
+	float: left;
+	width: 820px;
+	background: #fff;
+	margin-left:15px;
+}
+.tabBody {
+	padding: 20px;
+}
+.code-detail-box
+{
+	padding:10px;
+	height:475px;
+	overflow:hidden;
+}
+div#comment-box
+{
+	margin:5px 10px 15px 5px;	
+	padding-bottom:10px;
+	border-bottom:1px solid #ccc;
+	float:left;
+	width:100%;
+}
+.comment-block
+{
+	margin:0px 5px 5px 5px;
+	float:left;
+	width:100%;
+}
+.commenter-name
+{
+	display:block;
+	margin:0 0 10px 0;
+	float:left;
+	width:100%;
+	line-height:30px;
+	background:#F9F9F9;
+	color:#5cacee;
+	font-size:20px;
+	text-shadow:1px #ccc;
+}
+.comment-content
+{
+	float:left;
+	width:100%;
+	display:block;
+	background:#fff;
+	color:#000;
+	margin:5px 5px 2px 0;	
+}
+
+#makecomments
+{
+	width:100%;
+	float:left;
+	margin:0 0 10px 20px;
+}
+#comment-content
+{
+	margin:0 0 5px 0;
+	float:left;
+	clear:both;
+	width:710px;
+}
+#submit-comment
+{
+	margin: 5px 10px 0px 500px;
+	float:left;		
+	width: 80px;
+	line-height:40px;
+	padding:5px;
+}
+#reset-comment
+{
+	margin: 5px 10px 0px 5px;
+	float:left;
+	width: 80px;
+	line-height:40px;
+	padding:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
