@@ -22,6 +22,7 @@ class LoginForm extends CFormModel {
             // username and password are required
             array('username', 'required','message'=>'用户名不能为空'),
             array('password', 'required','message'=>'密码不能为空') , 
+            
             // rememberMe needs to be a boolean
             array('rememberMe', 'boolean'),
             // password needs to be authenticated，should pass the authenticate() method

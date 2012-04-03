@@ -4046,25 +4046,486 @@ Stack trace:
 REQUEST_URI=/~evaslee/SEProjectManagement/index.php?r=site/manageinfo
 HTTP_REFERER=http://localhost/~evaslee/SEProjectManagement/index.php?r=site/manageinfo
 ---
-2012/04/03 14:28:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\db\CDbConnection.php:382
+2012/04/02 18:02:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in /Users/EvasLee/Sites/yii/framework/web/CController.php:484
 Stack trace:
-#0 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\db\CDbConnection.php(331): CDbConnection->open()
-#1 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
-#2 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\base\CModule.php(388): CDbConnection->init()
-#3 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\base\CApplication.php(431): CModule->getComponent('db')
-#4 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
-#5 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
-#6 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(CategoryInfo))
-#7 L:\Software_Institute_Project_Overview\PM-system\PM-System\protected\models\CategoryInfo.php(24): CActiveRecord::model('CategoryInfo')
-#8 L:\Software_Institute_Project_Overview\PM-system\PM-System\protected\controllers\AppHomeController.php(11): CategoryInfo::model()
-#9 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\web\actions\CInlineAction.php(50): AppHomeController->actionIndex()
-#10 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#11 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#12 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\web\CWebApplication.php(276): CController->run('index')
-#14 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\web\CWebApplication.php(135): CWebApplication->runController('apphome/index')
-#15 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#16 L:\Software_Institute_Project_Overview\PM-system\PM-System\index.php(13): CApplication->run()
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(271): CController->missingAction('view')
+#1 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('view')
+#2 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('project/view')
+#3 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~evaslee/SEProjectManagement/index.php?r=project/view
+HTTP_REFERER=http://localhost/~evaslee/SEProjectManagement/index.php?r=codemain/index
+---
+2012/04/02 19:22:17 [error] [exception.CException] exception 'CException' with message 'Property "CActiveForm.class" is not defined.' in /Users/EvasLee/Sites/yii/framework/base/CComponent.php:174
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CWidgetFactory.php(162): CComponent->__set('class', 'well')
+#1 /Users/EvasLee/Sites/yii/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(SiteController), 'CActiveForm', Array)
+#2 /Users/EvasLee/Sites/yii/framework/web/CBaseController.php(190): CBaseController->createWidget('CActiveForm', Array)
+#3 /Users/EvasLee/Sites/SEProjectManagement/protected/views/site/login.php(78): CBaseController->beginWidget('CActiveForm', Array)
+#4 /Users/EvasLee/Sites/yii/framework/web/CBaseController.php(127): require('/Users/EvasLee/...')
+#5 /Users/EvasLee/Sites/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/EvasLee/...', Array, true)
+#6 /Users/EvasLee/Sites/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/EvasLee/...', Array, true)
+#7 /Users/EvasLee/Sites/yii/framework/web/CController.php(783): CController->renderPartial('login', Array, true)
+#8 /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/SiteController.php(153): CController->render('login', Array)
+#9 /Users/EvasLee/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#10 /Users/EvasLee/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#17 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#19 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#20 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/~evaslee/SEProjectManagement/index.php?r=site/login
+HTTP_REFERER=http://localhost/~evaslee/SEProjectManagement/index.php?r=apphome/index
+---
+2012/04/02 19:36:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message '您已经登录了，请不要乱点。。。。。。' in /Users/EvasLee/Sites/yii/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), '???????????????...')
+#1 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#8 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~evaslee/SEProjectManagement/index.php?r=site/login
+HTTP_REFERER=http://localhost/~evaslee/SEProjectManagement/index.php?r=apphome/index
+---
+2012/04/02 20:13:44 [error] [exception.CException] exception 'CException' with message 'Property "User.UserPassword" is not defined.' in /Users/EvasLee/Sites/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('UserPassword')
+#1 /Users/EvasLee/Sites/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('UserPassword')
+#2 /Users/EvasLee/Sites/yii/framework/web/helpers/CHtml.php(1774): CHtml::resolveValue(Object(User), 'UserPassword')
+#3 /Users/EvasLee/Sites/yii/framework/web/helpers/CHtml.php(1238): CHtml::activeInputField('password', Object(User), 'UserPassword', Array)
+#4 /Users/EvasLee/Sites/yii/framework/web/widgets/CActiveForm.php(598): CHtml::activePasswordField(Object(User), 'UserPassword', Array)
+#5 /Users/EvasLee/Sites/SEProjectManagement/protected/views/site/UserForm.php(28): CActiveForm->passwordField(Object(User), 'UserPassword')
+#6 /Users/EvasLee/Sites/yii/framework/web/CBaseController.php(127): require('/Users/EvasLee/...')
+#7 /Users/EvasLee/Sites/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/EvasLee/...', Array, true)
+#8 /Users/EvasLee/Sites/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/EvasLee/...', Array, true)
+#9 /Users/EvasLee/Sites/yii/framework/web/CController.php(783): CController->renderPartial('UserForm', Array, true)
+#10 /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/SiteController.php(190): CController->render('UserForm', Array)
+#11 /Users/EvasLee/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionRegister()
+#12 /Users/EvasLee/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#19 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('register')
+#21 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/register')
+#22 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/~evaslee/SEProjectManagement/index.php?r=site/register
+HTTP_REFERER=http://localhost/~evaslee/SEProjectManagement/index.php?r=site/login
+---
+2012/04/02 20:16:30 [warning] [application] Failed to set unsafe attribute "username" of "LoginForm".
+in /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/SiteController.php (126)
+in /Users/EvasLee/Sites/SEProjectManagement/index.php (13)
+2012/04/02 20:16:41 [warning] [application] Failed to set unsafe attribute "username" of "LoginForm".
+in /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/SiteController.php (126)
+in /Users/EvasLee/Sites/SEProjectManagement/index.php (13)
+2012/04/02 20:17:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('admin')
+#1 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=admin
+---
+2012/04/02 20:18:33 [warning] [application] Failed to set unsafe attribute "username" of "LoginForm".
+in /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/SiteController.php (126)
+in /Users/EvasLee/Sites/SEProjectManagement/index.php (13)
+2012/04/02 20:19:08 [warning] [application] Failed to set unsafe attribute "username" of "LoginForm".
+in /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/SiteController.php (126)
+in /Users/EvasLee/Sites/SEProjectManagement/index.php (13)
+2012/04/02 20:23:39 [error] [exception.CException] exception 'CException' with message 'Property "User.UserPassword" is not defined.' in /Users/EvasLee/Sites/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('UserPassword')
+#1 /Users/EvasLee/Sites/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('UserPassword')
+#2 /Users/EvasLee/Sites/yii/framework/web/helpers/CHtml.php(1774): CHtml::resolveValue(Object(User), 'UserPassword')
+#3 /Users/EvasLee/Sites/yii/framework/web/helpers/CHtml.php(1238): CHtml::activeInputField('password', Object(User), 'UserPassword', Array)
+#4 /Users/EvasLee/Sites/yii/framework/web/widgets/CActiveForm.php(598): CHtml::activePasswordField(Object(User), 'UserPassword', Array)
+#5 /Users/EvasLee/Sites/SEProjectManagement/protected/views/site/UserForm.php(28): CActiveForm->passwordField(Object(User), 'UserPassword')
+#6 /Users/EvasLee/Sites/yii/framework/web/CBaseController.php(127): require('/Users/EvasLee/...')
+#7 /Users/EvasLee/Sites/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/EvasLee/...', Array, true)
+#8 /Users/EvasLee/Sites/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/EvasLee/...', Array, true)
+#9 /Users/EvasLee/Sites/yii/framework/web/CController.php(783): CController->renderPartial('UserForm', Array, true)
+#10 /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/SiteController.php(190): CController->render('UserForm', Array)
+#11 /Users/EvasLee/Sites/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionRegister()
+#12 /Users/EvasLee/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#19 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('register')
+#21 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/register')
+#22 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=site/register
+HTTP_REFERER=http://localhost/~Evaslee/SEProjectManagement/index.php?r=apphome/index
+---
+2012/04/02 20:24:16 [warning] [application] Failed to set unsafe attribute "username" of "LoginForm".
+in /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/SiteController.php (126)
+in /Users/EvasLee/Sites/SEProjectManagement/index.php (13)
+2012/04/02 20:26:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message '您已经登录了，请不要乱点。。。。。。' in /Users/EvasLee/Sites/yii/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), '???????????????...')
+#1 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#8 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~evaslee/SEProjectManagement/index.php?r=site/login
+HTTP_REFERER=http://localhost/~evaslee/SEProjectManagement/index.php?r=apphome/index
+---
+2012/04/02 20:38:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message '您已经登录了，请不要乱点。。。。。。' in /Users/EvasLee/Sites/yii/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), '???????????????...')
+#1 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#8 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=site/login
+---
+2012/04/02 20:42:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message '您已经登录了，请不要乱点。。。。。。' in /Users/EvasLee/Sites/yii/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), '???????????????...')
+#1 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#8 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=site/login
+---
+2012/04/02 20:43:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message '您已经登录了，请不要乱点。。。。。。' in /Users/EvasLee/Sites/yii/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), '???????????????...')
+#1 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#8 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=site/login
+---
+2012/04/02 22:02:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in /Users/EvasLee/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(271): CController->missingAction('view')
+#1 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('view')
+#2 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('project/view')
+#3 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~evaslee/SEProjectManagement/index.php?r=project/view
+HTTP_REFERER=http://localhost/~evaslee/SEProjectManagement/index.php?r=apphome/index
+---
+2012/04/03 10:43:30 [warning] [application] Failed to set unsafe attribute "ProjectIcon" of "Project".
+in /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/ProjectController.php (17)
+in /Users/EvasLee/Sites/SEProjectManagement/index.php (13)
+2012/04/03 10:43:30 [warning] [application] Failed to set unsafe attribute "CodeFile" of "ProjectCode".
+in /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/ProjectController.php (18)
+in /Users/EvasLee/Sites/SEProjectManagement/index.php (13)
+2012/04/03 11:19:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/EvasLee/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(271): CController->missingAction('')
+#1 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('')
+#2 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('DetailList')
+#3 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=DetailList
+HTTP_REFERER=http://localhost/~Evaslee/SEProjectManagement/index.php?r=gii/controller
+---
+2012/04/03 11:20:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/EvasLee/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(271): CController->missingAction('')
+#1 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('')
+#2 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('DetailList')
+#3 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=DetailList
+HTTP_REFERER=http://localhost/~Evaslee/SEProjectManagement/index.php?r=gii/controller
+---
+2012/04/03 11:20:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/EvasLee/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(271): CController->missingAction('')
+#1 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('')
+#2 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('DetailList')
+#3 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=DetailList
+HTTP_REFERER=http://localhost/~Evaslee/SEProjectManagement/index.php?r=gii/controller
+---
+2012/04/03 11:21:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/EvasLee/Sites/yii/framework/web/CController.php:337
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#7 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('index')
+#9 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('codeinfo/index')
+#10 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=codeinfo/index
+---
+2012/04/03 11:21:58 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/EvasLee/Sites/yii/framework/web/CController.php:337
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#7 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('index')
+#9 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('codeinfo/index/...')
+#10 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=codeinfo/index/projectid=26
+---
+2012/04/03 11:25:07 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "redirect".' in /Users/EvasLee/Sites/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('redirect', Array)
+#1 /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/CodeinfoController.php(16): CWebApplication->redirect(Object(CHttpRequest))
+#2 [internal function]: CodeInfoController->actionIndex('')
+#3 /Users/EvasLee/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CodeInfoController), Array)
+#4 /Users/EvasLee/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CodeInfoController), Object(ReflectionMethod), Array)
+#5 /Users/EvasLee/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#12 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('index')
+#14 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('codeinfo/index')
+#15 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
 #17 {main}
-REQUEST_URI=/index.php?r=apphome/index
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=codeinfo/index&projectid=
+---
+2012/04/03 11:25:20 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "redirect".' in /Users/EvasLee/Sites/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('redirect', Array)
+#1 /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/CodeinfoController.php(16): CWebUser->redirect(Object(CHttpRequest))
+#2 [internal function]: CodeInfoController->actionIndex('')
+#3 /Users/EvasLee/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CodeInfoController), Array)
+#4 /Users/EvasLee/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CodeInfoController), Object(ReflectionMethod), Array)
+#5 /Users/EvasLee/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#12 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('index')
+#14 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('codeinfo/index')
+#15 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=codeinfo/index&projectid=
+---
+2012/04/03 11:28:02 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.requestUrl" is not defined.' in /Users/EvasLee/Sites/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/base/CModule.php(106): CComponent->__get('requestUrl')
+#1 /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/CodeinfoController.php(16): CModule->__get('requestUrl')
+#2 [internal function]: CodeInfoController->actionIndex('')
+#3 /Users/EvasLee/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CodeInfoController), Array)
+#4 /Users/EvasLee/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CodeInfoController), Object(ReflectionMethod), Array)
+#5 /Users/EvasLee/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#12 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('index')
+#14 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('codeinfo/index')
+#15 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=codeinfo/index&projectid=
+---
+2012/04/03 11:28:16 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.returnUrl" is not defined.' in /Users/EvasLee/Sites/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/base/CModule.php(106): CComponent->__get('returnUrl')
+#1 /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/CodeinfoController.php(16): CModule->__get('returnUrl')
+#2 [internal function]: CodeInfoController->actionIndex('')
+#3 /Users/EvasLee/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CodeInfoController), Array)
+#4 /Users/EvasLee/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CodeInfoController), Object(ReflectionMethod), Array)
+#5 /Users/EvasLee/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#12 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('index')
+#14 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('codeinfo/index')
+#15 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=codeinfo/index&projectid=
+---
+2012/04/03 11:28:17 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.returnUrl" is not defined.' in /Users/EvasLee/Sites/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/base/CModule.php(106): CComponent->__get('returnUrl')
+#1 /Users/EvasLee/Sites/SEProjectManagement/protected/controllers/CodeinfoController.php(16): CModule->__get('returnUrl')
+#2 [internal function]: CodeInfoController->actionIndex('')
+#3 /Users/EvasLee/Sites/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CodeInfoController), Array)
+#4 /Users/EvasLee/Sites/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CodeInfoController), Object(ReflectionMethod), Array)
+#5 /Users/EvasLee/Sites/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /Users/EvasLee/Sites/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /Users/EvasLee/Sites/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /Users/EvasLee/Sites/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /Users/EvasLee/Sites/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /Users/EvasLee/Sites/yii/framework/web/CController.php(292): CFilterChain->run()
+#12 /Users/EvasLee/Sites/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('index')
+#14 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('codeinfo/index')
+#15 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=codeinfo/index&projectid=
+---
+2012/04/03 12:36:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/EvasLee/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(271): CController->missingAction('')
+#1 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('')
+#2 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('DetailList')
+#3 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=DetailList
+HTTP_REFERER=http://localhost/~Evaslee/SEProjectManagement/index.php?r=gii/controller
+---
+2012/04/03 12:37:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/EvasLee/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(271): CController->missingAction('')
+#1 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('')
+#2 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('DetailList')
+#3 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=DetailList
+HTTP_REFERER=http://localhost/~Evaslee/SEProjectManagement/index.php?r=gii/controller
+---
+2012/04/03 12:37:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/EvasLee/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(271): CController->missingAction('')
+#1 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('')
+#2 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('DetailList')
+#3 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=DetailList
+HTTP_REFERER=http://localhost/~Evaslee/SEProjectManagement/index.php?r=gii/controller
+---
+2012/04/03 12:40:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/EvasLee/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(271): CController->missingAction('')
+#1 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('')
+#2 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('DetailList')
+#3 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=DetailList
+HTTP_REFERER=http://localhost/~Evaslee/SEProjectManagement/index.php?r=gii/controller
+---
+2012/04/03 12:40:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/EvasLee/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(271): CController->missingAction('')
+#1 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('')
+#2 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('DetailList')
+#3 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=DetailList
+HTTP_REFERER=http://localhost/~Evaslee/SEProjectManagement/index.php?r=gii/controller
+---
+2012/04/03 12:41:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/EvasLee/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(271): CController->missingAction('')
+#1 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('')
+#2 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('DetailList')
+#3 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=DetailList&type=c&category=%E5%88%9B%E6%96%B0%E6%9D%AF
+---
+2012/04/03 12:44:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "liat".' in /Users/EvasLee/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(271): CController->missingAction('liat')
+#1 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('liat')
+#2 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('DetailList/liat')
+#3 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=DetailList/liat&type=c&category=%E5%88%9B%E6%96%B0%E6%9D%AF
+---
+2012/04/03 12:44:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "liat".' in /Users/EvasLee/Sites/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/EvasLee/Sites/yii/framework/web/CController.php(271): CController->missingAction('liat')
+#1 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(276): CController->run('liat')
+#2 /Users/EvasLee/Sites/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('DetailList/liat')
+#3 /Users/EvasLee/Sites/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/EvasLee/Sites/SEProjectManagement/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~Evaslee/SEProjectManagement/index.php?r=DetailList/liat&type=c&category=%E5%88%9B%E6%96%B0%E6%9D%AF
 ---

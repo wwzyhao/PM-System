@@ -43,8 +43,8 @@ class User extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('UserName', 'required', 'message' => '用户名不能为空', 'on' => 'Register'),
-            array('UserName', 'unique', 'message' => '用户名重复', 'on' => 'Register'),
+//            array('UserName', 'required', 'message' => '用户名不能为空', 'on' => 'Register'),
+//            array('UserName', 'unique', 'message' => '用户名重复', 'on' => 'Register'),
 //            array('UserPassword', 'required', 'message' => '密码不能为空'),
 //            array('confirmPassword', 'required', 'message' => ''),
 //            array('confirmPassword', 'compare', 'compareAttribute' => 'UserPassword',
