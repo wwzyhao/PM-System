@@ -4046,3 +4046,25 @@ Stack trace:
 REQUEST_URI=/~evaslee/SEProjectManagement/index.php?r=site/manageinfo
 HTTP_REFERER=http://localhost/~evaslee/SEProjectManagement/index.php?r=site/manageinfo
 ---
+2012/04/03 14:28:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\db\CDbConnection.php:382
+Stack trace:
+#0 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\base\CModule.php(388): CDbConnection->init()
+#3 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(CategoryInfo))
+#7 L:\Software_Institute_Project_Overview\PM-system\PM-System\protected\models\CategoryInfo.php(24): CActiveRecord::model('CategoryInfo')
+#8 L:\Software_Institute_Project_Overview\PM-system\PM-System\protected\controllers\AppHomeController.php(11): CategoryInfo::model()
+#9 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\web\actions\CInlineAction.php(50): AppHomeController->actionIndex()
+#10 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\web\CWebApplication.php(276): CController->run('index')
+#14 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\web\CWebApplication.php(135): CWebApplication->runController('apphome/index')
+#15 L:\Software_Institute_Project_Overview\PM-system\PM-System\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 L:\Software_Institute_Project_Overview\PM-system\PM-System\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=apphome/index
+---
