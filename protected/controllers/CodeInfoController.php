@@ -10,8 +10,9 @@ class CodeInfoController extends Controller {
         Yii::app()->clientScript->registerCoreScript('jquery');
     }
 
-    public function actionIndex() {
+    public function actionIndex($projectid) {
         // CodeMainController::
+       
         $id = Yii::app()->user->getState('id');
         $projectid = $_GET['projectid'];
 //           $this->redirect($this->createUrl('View'));
@@ -29,6 +30,9 @@ class CodeInfoController extends Controller {
         $categoryID = AppCodeCategory::model()->with('category')->findAllByAttributes(array(
             'ProjectID' => $projectid
                 ));
+         if(empty ($project)){
+            $this->redirect(array('codemain/index'));
+        }
         foreach ($categoryID as $value) {
             if ($value->category[Flag] == 'c') {
                 $category = $value->category;

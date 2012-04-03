@@ -1,5 +1,7 @@
 
 
+
+
 <!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -172,7 +174,7 @@ if (Yii::app()->user->name !== 'Guest') {
             </div>		
         </header>
         <hr>
-        <nav class="row">						
+<!--        <nav class="row">						
             <ul id="menu" class="span12 offset2">
                 <li ><a href="<?php echo Yii::app()->createUrl('apphome/index'); ?>">
                         <i class="icon-home"></i>应用市场</a></li>
@@ -183,7 +185,7 @@ if (Yii::app()->user->name !== 'Guest') {
                 <li ><a href="<?php echo Yii::app()->createUrl('project/create'); ?>">
                         <i class="icon-star"></i>创建项目</a></li>															
             </ul> 
-        </nav>
+        </nav>-->
 
         <?php echo $content; ?>
 

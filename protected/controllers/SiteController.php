@@ -67,6 +67,7 @@ class SiteController extends Controller {
      */
     public function actionError() {
         if ($error = Yii::app()->errorHandler->error) {
+            
 
             if (Yii::app()->request->isAjaxRequest)
                 echo $error['message'];
@@ -83,6 +84,14 @@ class SiteController extends Controller {
      * Displays the contact page
      */
     public function actionContact() {
+        
+        if(isset($_POST['ajax']) && $_POST['ajax']==='contact-form')
+          {
+          echo CActiveForm::validate($model);
+          Yii::app()->end();
+          }
+          
+        $this->layout = "//layouts/no_navi";
         $model = new ContactForm;
         if (isset($_POST['ContactForm'])) {
             $model->attributes = $_POST['ContactForm'];
@@ -108,6 +117,7 @@ class SiteController extends Controller {
      * Displays the login page
      */
     public function actionLogin() {
+        $this->layout = "//layout/s";
         Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/main.css');
 
         $cookie = Yii::app()->request->getCookies();
@@ -237,12 +247,12 @@ class SiteController extends Controller {
             $type = $_POST['type'];
         }
         
-		if($type === 1||$type == 'app')
+		if($type === 1||$type == 'app'||$type == 'a')
 			$project_type="app";
 		else
 			$project_type="code";
 
-		$dir_name = "protected/data/".$project_id."/".$project_type;
+		$dir_name = "protected/data/".$project_id.$project_type;
 
 		$dir_handle = opendir($dir_name) or die("can't open ".$dir_name);
 
